@@ -7,71 +7,15 @@
 </head>
 <body>
 
-<h1 class="title">✨ Our Family Tree</h1>
+<h1>✨ Family Tree</h1>
 
-<div class="tree">
+<input type="text" id="search" placeholder="Search name...">
 
-  <!-- ROOT -->
-  <div class="node">
-    <div class="card root">Bhelu Singh & Fishki Devi</div>
-
-    <div class="children">
-
-      <!-- JETHU BRANCH -->
-      <div class="node">
-        <div class="card gen2">Jethu Singh & Badima1 Devi</div>
-
-        <div class="children">
-          <div class="card gen3">Rajendra → Mukesh, Aravind, Gambhir, Sandeep, Priyanka, Kajal</div>
-          <div class="card gen3">Tikam</div>
-          <div class="card gen3">Vijendra → Khushi, Anya</div>
-          <div class="card gen3">Ravindra</div>
-          <div class="card gen3">Roshni</div>
-          <div class="card gen3">Leela</div>
-        </div>
-      </div>
-
-      <!-- PARAM BRANCH -->
-      <div class="node">
-        <div class="card gen2">Param Singh & Badima2 Devi</div>
-
-        <div class="children">
-          <div class="card gen3">Shyam → Shubham, Vishesh</div>
-          <div class="card gen3">Charan → Avni, Ateksha</div>
-          <div class="card gen3">Raghuveer → Aditya, Sneha, Rashi, Avika</div>
-          <div class="card gen3">Mahaveer → Aaradhya, Suhani</div>
-          <div class="card gen3">Ajay → Siddhika</div>
-          <div class="card gen3">Meera</div>
-        </div>
-      </div>
-
-      <!-- KUNDAN BRANCH -->
-      <div class="node">
-        <div class="card gen2">Kundan Singh & Rajani Devi</div>
-
-        <div class="children">
-          <div class="card gen3">Ashish</div>
-          <div class="card gen3">Ayush</div>
-          <div class="card gen3">Neha</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
+<div id="container">
+  <svg id="lines"></svg>
+  <div id="tree"></div>
 </div>
 
-<script>
-  // Expand / collapse interaction
-  document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', () => {
-      const children = card.parentElement.querySelector('.children');
-      if (children) {
-        children.classList.toggle('hidden');
-      }
-    });
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
